@@ -8,10 +8,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## SAMPLE SCREENSHOT
 
-![alt text](./SS1.png)
-![alt text](./SS2.png)
-![alt text](./SS3.png)
-![alt text](./SS4.png)
+![alt text](./SS11.png)
+![alt text](./SS21.png)
+![alt text](./SS31.png)
+![alt text](./SS41.png)
 
 
 ## Code scaffolding
