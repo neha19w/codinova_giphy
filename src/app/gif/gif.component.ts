@@ -62,18 +62,18 @@ export class GifComponent implements OnInit {
 
   searchQuery(text: any) {
     this.loadingBar.start();
-    this.searchedText = text
-    this.searchList = []
+    this.searchedText = this.inputSearch?.nativeElement.value
     this.offset = 0
     console.log(this.inputSearch?.nativeElement.value)
     this.ApiLoading = true
 
-    this.search.searchApiWithQuery(text, this.offset, this.limit).subscribe((result: any) => {
+    this.search.searchApiWithQuery(this.inputSearch?.nativeElement.value, this.offset, this.limit).subscribe((result: any) => {
       console.log(result);
       this.searchList = result.data;
       console.log("searchList", this.searchList);
       this.loadingBar.stop();
-
+      
+      this.ApiLoading = false
     })
   }
 
@@ -82,7 +82,7 @@ export class GifComponent implements OnInit {
   searchQueryWithText(text: any) {
     console.log(this.inputSearch?.nativeElement.value)
     this.ApiLoading = true
-    this.search.searchApiWithQuery(text, this.offset, this.limit).subscribe((result: any) => {
+    this.search.searchApiWithQuery(this.inputSearch?.nativeElement.value, this.offset, this.limit).subscribe((result: any) => {
       this.replaceAndAppendArray(result)
     })
   }
