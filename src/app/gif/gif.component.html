@@ -1,0 +1,26 @@
+<div class="main">
+
+    <img src="/assets/giphy.png" width="15%">
+   
+
+    <div class="search-main">
+        <input #inputSearch class="search" placeholder="@username + tag to search within a verified channel" type="search" (keyup)="searchQuery($event)">
+       
+        <button class="search-btn" type="submit" (click)="searchGifs()"><i class="fa fa-search"></i></button>
+    </div>
+
+    
+    <div>
+        <p>Treanding GIFs</p>
+        
+        <div class="panel">
+            <div  *ngFor="let s of searchList" class="flex justify-center flex-col w-full h-full shadow rounded overflow-hidden bg-gray-200">
+                <img [src]="s.images.fixed_height_small.url" width="100%" height="100%">
+            </div>
+        </div>
+        <ngx-loading-bar class="loaderPosition" ></ngx-loading-bar>
+
+    </div>
+
+</div>
+

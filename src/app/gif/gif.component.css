@@ -1,0 +1,36 @@
+.main{
+    width: 70%;
+    margin: auto;
+    color: white;
+}
+.search-main{
+    display: flex;
+}
+.search{
+    float: left;
+    width: 100%;
+    padding: 1%;
+}
+.search-btn{
+    float: right;
+    border: none;
+    background-color: rgb(196, 81, 186);
+    width: 5%;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+.panel{
+  width: 100%;
+  margin-top: 100px;
+  align-self: center;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  grid-gap: 5px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
